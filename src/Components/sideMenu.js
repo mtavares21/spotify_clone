@@ -11,46 +11,44 @@ import ContentSearch from "@mui/icons-material/Search";
 import ContentLiked from "@mui/icons-material/Favorite";
 import Cloud from "@mui/icons-material/Cloud";
 
-export default function SideMenu() {
+export default function SideMenu({setMenuItem}) {
   return (
     <Paper
       sx={{
         width: 320,
         maxWidth: "100%",
         backgroundColor: "black",
-		color: "white",
-		padding: "0px",
+        color: "white",
+        padding: "0px",
+        fontWeight: "bold",
       }}
     >
       <MenuList>
-        <MenuItem>
+        <MenuItem onClick={ ()=> setMenuItem(() => 'home')}>
           <ListItemIcon>
-            <ContentHome sx={{color:"white"}} fontSize="small" />
+            <ContentHome sx={{ color: "white" }} fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Home</ListItemText>
-          <Typography variant="body2" color="text.secondary">
+          <Typography fontWeight="bold" >
             Home
           </Typography>
         </MenuItem>
-        <MenuItem>
+        <MenuItem onClick={() => setMenuItem(() => 'search')} >
           <ListItemIcon>
-            <ContentSearch sx={{color:"white"}} fontSize="small" />
+            <ContentSearch sx={{ color: "white" }} fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Search</ListItemText>
-          <Typography variant="body2" color="text.secondary">
+          <Typography fontWeight="bold" >
             Search
           </Typography>
         </MenuItem>
-	  <MenuItem>
+        <MenuItem onClick={() =>setMenuItem(() => 'liked_songs')}>
           <ListItemIcon>
-            <ContentLiked sx={{color:"white"}} fontSize="small" />
+            <ContentLiked sx={{ color: "white" }} fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Liked Songs</ListItemText>
-          <Typography variant="body2" color="text.secondary">
+          <Typography fontWeight="bold" >
             Liked Songs
           </Typography>
         </MenuItem>
-	  </MenuList>
+      </MenuList>
     </Paper>
   );
 }
