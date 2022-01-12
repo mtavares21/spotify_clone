@@ -126,6 +126,23 @@ async function getPlayerState() {
     console.log(error);
   }
 }
+async function trackInPlaylist(playlistId, spotifyId) {
+  const userId = await getUserId();
+  const headers = {
+    "Content-Type": "application/json",
+    withCredentials: true,
+  };
+  try {
+    const response = await axios.get(
+      `${baseUrl}db/playlist/${playlistId}/in?&spotifyId=${spotifyId}&token=${token}&user=${userId}`,
+      { headers }
+    );
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
 async function addTrackToPlaylist(
   playlistId,
   album,
@@ -181,6 +198,7 @@ export {
   playerAction,
   getPlayerState,
   getPlaylist,
+  trackInPlaylist,
   addTrackToPlaylist,
   removeTrackFromPlaylist,
 };

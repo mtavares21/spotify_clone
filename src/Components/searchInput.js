@@ -10,7 +10,7 @@ export default function SearchInput({ updateSearchResults }) {
   inputRef.current = input;
 
   const handleSearch = (e) => {
-    if (e.target.value !== undefined) setInput((prev) => e.target.value);
+    setInput((prev) => e.target.value);
   };
 
   const updateSearch = async (input) => {
@@ -18,19 +18,18 @@ export default function SearchInput({ updateSearchResults }) {
     try {
 	  const searchData = await search(input, "track");
 	  updateSearchResults(searchData.tracks.items);
-	  setLoading(false);
     } catch (error) {
       console.log(error);
-    }
+    } finally { setLoading(prev => false) }
   };
 
   useEffect(async () => {
 	let timeoutCode = null;
 	console.log(input)
-    if (!!input && !loading){
+    if (!loading){
 		 timeoutCode = setTimeout(() =>updateSearch(inputRef.current), 800);
 		 setLoading(prev => true)
-	}
+  }
     return () => {
 		clearTimeout(timeoutCode)
 	};
