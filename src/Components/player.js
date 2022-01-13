@@ -104,7 +104,7 @@ export default function Player({ deviceId, setDeviceId, token }) {
       className="flex no-wrap justify-between w-full bg-gray-900 absolute bottom-0 "
     >
       <div className="w-1/3 flex no-wrap justify-start align-center">
-        <div className="h-70 w-70 m-5">
+        <div className="h-70 w-70 m-5 overflow-hidden">
           <img src={image} />
         </div>
         <div className="flex flex-col align-center justify-center align-between wrap">
