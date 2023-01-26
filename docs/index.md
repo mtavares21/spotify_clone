@@ -1,11 +1,8 @@
-# Spotify Clone
+# ${{ values.component_id }}
 
-## Objective
+${{ values.description }}
 
-Use the previously created Spotify Clone Api to build a Spotify Web Page.
+## Getting started
 
-## About
-
-This is the last project from The Odin Project Full-Stack Developer path: to reproduce a relatively complex web page of your choice with limited scope.
-
-In this clone the user starts with an "empty" Spotify account and can then add liked songs.
+Start writing your documentation by adding more markdown (.md) files to this
+folder (/docs) or replace the content in this file.
