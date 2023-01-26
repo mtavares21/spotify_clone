@@ -1,7 +1,8 @@
-site_name: 'spotify-clone'
+site_name: ${{values.component_id}}
+site_description: ${{values.description}}
 
 nav:
-  - Home: index.md
+  - Introduction: index.md
 
 plugins:
   - techdocs-core
