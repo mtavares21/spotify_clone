@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: spotify_clone
   annotations:
+    backstage.io/techdocs-ref: value
     github.com/project-slug: mtavares21/spotify_clone
 spec:
   type: other
