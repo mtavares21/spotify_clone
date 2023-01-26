@@ -1,0 +1,7 @@
+site_name: 'spotify-clone'
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
