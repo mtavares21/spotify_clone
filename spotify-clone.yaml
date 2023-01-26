@@ -1,4 +1,3 @@
-apiVersion: spotify-clone/v1
 kind: Component
 metadata:
   name: spotify-clone
