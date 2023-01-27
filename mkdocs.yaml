@@ -1,5 +1,5 @@
-site_name: ${{values.name}}
-site_description: ${{values.description}}
+site_name: Spotify Clone
+site_description: Spotify App Clone - The Odin Project Curriculum
 component_id: spotify-clone
 nav:
   - Introduction: index.md
